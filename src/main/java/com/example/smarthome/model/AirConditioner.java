@@ -1,21 +1,18 @@
 package com.example.smarthome.model;
 
-public class AirConditioner implements Appliance {
-    private boolean isOn;
+public class AirConditioner extends Appliance {
+
+    public AirConditioner(String id) {
+        super(id);
+    }
 
     @Override
     public void turnOn() {
-        isOn = true;
-        System.out.println("Air Conditioner is turned on.");
+        System.out.println("Air Conditioner is now ON");
     }
 
     @Override
     public void turnOff() {
-        isOn = false;
-        System.out.println("Air Conditioner is turned off.");
-    }
-
-    public boolean isOn() {
-        return isOn;
+        System.out.println("Air Conditioner is now OFF");
     }
 }

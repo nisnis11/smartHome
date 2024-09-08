@@ -12,13 +12,3 @@ public class SmartHomeApplication {
         SpringApplication.run(SmartHomeApplication.class, args);
     }
 }
-
-
-//Enable turn on/off for individual appliance
-//Springboot testing
-// Add properties spring.port
-//Add class and method level comments
-//Add application context using spring property in application.properties
-//Add general logging 
-//Add success or error messages for turnOn and turnOff commands
-//Enable scheduling - restart of appliances

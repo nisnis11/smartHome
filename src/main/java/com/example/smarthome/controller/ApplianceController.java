@@ -1,25 +1,34 @@
 package com.example.smarthome.controller;
 
-import com.example.smarthome.service.SmartHomeController;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.smarthome.service.ApplianceService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/appliances")
 public class ApplianceController {
 
-    private final SmartHomeController smartHomeController;
+    @Autowired
+    private ApplianceService applianceService;
 
-    public ApplianceController(SmartHomeController smartHomeController) {
-        this.smartHomeController = smartHomeController;
+    @GetMapping("/turnOn")
+    public String turnOnAppliance(@RequestParam("id") String id) {
+        return applianceService.turnOnAppliance(id);
     }
 
-    @GetMapping("/turnOnAll")
-    public void turnOnAllAppliances() {
-        smartHomeController.turnAllOn();
+    @GetMapping("/test")
+    public String getTetst() {
+        return "hello";
     }
 
-    @GetMapping("/turnOffAll")
-    public void turnOffAllAppliances() {
-        smartHomeController.turnAllOff();
+    @GetMapping("/turnOff")
+    public String turnOffAppliance(@RequestParam("id") String id) {
+        return applianceService.turnOffAppliance(id);
+    }
+
+    @PostMapping("/increaseFanSpeed")
+    public String increaseFanSpeed(@RequestParam("id") String id, @RequestParam("increment") String increment) {
+        int incrementValue = Integer.parseInt(increment);
+        return applianceService.increaseFanSpeed(id, incrementValue);
     }
 }

@@ -1,21 +1,18 @@
 package com.example.smarthome.model;
 
-public class Light implements Appliance {
-    private boolean isOn;
+public class Light extends Appliance {
+
+    public Light(String id) {
+        super(id);
+    }
 
     @Override
     public void turnOn() {
-        isOn = true;
-        System.out.println("Light is switched on.");
+        System.out.println("Light is now ON");
     }
 
     @Override
     public void turnOff() {
-        isOn = false;
-        System.out.println("Light is switched off.");
-    }
-
-    public boolean isOn() {
-        return isOn;
+        System.out.println("Light is now OFF");
     }
 }
