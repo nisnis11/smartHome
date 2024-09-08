@@ -1,4 +1,4 @@
-package com.example.smarthome.model;
+package com.example.service;
 
 public class AirConditioner extends Appliance {
 

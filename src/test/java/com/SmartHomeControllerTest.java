@@ -1,14 +1,14 @@
 package com;
 
-import com.example.smarthome.model.Appliance;
-import com.example.smarthome.model.Fan;
-import com.example.smarthome.service.ApplianceService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import com.example.service.Appliance;
+import com.example.service.ApplianceService;
+import com.example.service.Fan;
 
 import java.util.List;
 

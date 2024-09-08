@@ -1,4 +1,4 @@
-package com.example.smarthome.model;
+package com.example.service;
 
 /**
  * Abstract class representing a generic appliance.

@@ -1,12 +1,12 @@
 package com.example.config;
 
-import com.example.smarthome.model.Appliance;
-import com.example.smarthome.model.Fan;
-import com.example.smarthome.model.AirConditioner;
-import com.example.smarthome.model.Light;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import com.example.service.AirConditioner;
+import com.example.service.Appliance;
+import com.example.service.Fan;
+import com.example.service.Light;
 
 import java.util.Arrays;
 import java.util.List;

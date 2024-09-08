@@ -1,8 +1,9 @@
-package com.example.smarthome.controller;
+package com.example.controller;
 
-import com.example.smarthome.service.ApplianceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import com.example.service.ApplianceService;
 
 @RestController
 @RequestMapping("/appliances")

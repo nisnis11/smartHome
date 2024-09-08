@@ -1,4 +1,4 @@
-package com.example.smarthome.model;
+package com.example.service;
 
 /**
  * Concrete class representing a fan appliance that supports fan speed adjustments.

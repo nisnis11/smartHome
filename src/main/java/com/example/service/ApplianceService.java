@@ -1,7 +1,4 @@
-package com.example.smarthome.service;
-
-import com.example.smarthome.model.Appliance;
-import com.example.smarthome.model.Fan;
+package com.example.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -81,6 +78,8 @@ public class ApplianceService {
             Appliance foundAppliance = appliance.get();
 
             if (foundAppliance instanceof Fan) {
+                if (incrementValue == 0) { return "Fan with ID " + id + " is turned off (speed set to 0)."; }
+
                 ((Fan) foundAppliance).increaseFanSpeed(incrementValue);
                 return "Increased fan speed of appliance with ID " + id + " by " + incrementValue + ".";
             } else {
